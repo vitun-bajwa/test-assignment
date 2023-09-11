@@ -1,0 +1,16 @@
+<div class="mainWrapperrr">
+  <div class="main" style="border-right: 1px solid #000;height: 100vh;width: 10%;">
+    <ul style="text-decoration: none;list-style: none;">
+      <li *ngFor="let role of roleBased; index as i">
+        <a [routerLink]="['/feature/details' + '/' + role]">{{role}}</a>
+      </li>
+      <!-- <li>
+        <a [routerLink]="['/feature/dashboard/setting']">Setting</a>
+      </li> -->
+    </ul>
+  </div>
+  <div class="dashboardWrapper" style="width:90%">
+    <router-outlet></router-outlet>
+
+  </div>
+</div>

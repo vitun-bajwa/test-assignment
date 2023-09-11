@@ -1,0 +1,8 @@
+<table mat-table [dataSource]="data" class="mat-elevation-z8">
+  <ng-container [matColumnDef]="items" *ngFor="let items of cols">
+      <th mat-header-cell *matHeaderCellDef> {{items}} </th>
+      <td mat-cell *matCellDef="let element"> {{ element[items] | json}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="cols"></tr>
+  <tr mat-row *matRowDef="let row; columns: cols;"></tr>
+</table>

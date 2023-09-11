@@ -1,0 +1,9 @@
+<div class="main">
+  <form [formGroup]="form">
+    <app-input-settings [control]="form.controls['firstname']" [label]="loginControlNames.firstname" [type]="'text'"
+      [placeholder]="loginControlNames.firstname" [form]="form" [name]="'name'" [icon]="'person'"
+     [(value)]="disabled">
+    </app-input-settings>
+  </form>
+  <button mat-raised-button color="accent" [disabled]="disabled" (click)="onSubmit()">submitTo</button>
+</div>

@@ -1,0 +1,24 @@
+<h4>{{title}}</h4>
+<div class="signature-container">
+  <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()"
+    (onEndEvent)="drawComplete()"></signature-pad>
+</div>
+
+<div class="buttons">
+  <button (click)="clearSignature()">Clear signature pad</button>
+  <button (click)="savePad()">Save signature</button>
+  <button (click)="downloadSignature()">download</button>
+
+</div>
+
+<table class="table table-dark table-striped" table="1px">
+  <thead>
+    <tr>
+      <th scope="col">image</th>
+    </tr>
+    <tr *ngFor="let data of signatureImg; index as i">
+      <td>{{i+1}}<img [src]='data'></td>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>

@@ -1,0 +1,7 @@
+<app-child>
+  [productList]="products"
+  (onSelected)="onSelectedProduct($event)"
+</app-child>
+<div *ngIf="selectedProduct" class="card">
+  <h1>You selected {{ selectedProduct.name }}</h1>
+</div>

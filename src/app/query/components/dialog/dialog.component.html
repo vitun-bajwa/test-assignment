@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>Session timeout</h2>
+<div class="card m-3">
+  <div class="card-body">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <div>
+          <div class="form-row">
+              <div class="form-group col-5">
+                  <label>Name</label>
+                  {{storage2 | json}}
+                  <input type="text" formControlName="name" [(ngModel)]="data.name" class="form-control" />
+              </div>
+              <div class="form-group col-5">
+                  <label>Username</label>
+                  <input type="text" formControlName="username" [(ngModel)]="data.username" class="form-control"  />
+              </div>
+          </div>
+          <div class="form-group">
+              <label>Email</label>
+              <input type="text" formControlName="email" [(ngModel)]="data.email" class="form-control"  />
+          </div>
+        </div>
+      </form>
+  </div>
+</div>
+<mat-dialog-actions>
+<button mat-raised-button  color="warn"  class="btn" (click)="onNoClick()">Close</button>
+<!-- <button mat-raised-button color="primary" class="btn">Update</button> -->
+</mat-dialog-actions>

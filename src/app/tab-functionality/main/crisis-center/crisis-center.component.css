@@ -1,0 +1,21 @@
+table{
+  margin-top: 15px;
+  max-width: 450px;
+  width: 100%;
+}
+table tr th, table tr td{
+  padding: 10px 15px;
+  font-size: 14px;
+  border-bottom: 1px solid #fff;
+}
+table tr{
+  background-color: #f5f3f3;
+}
+table tr th:first-child{
+  background-color: #bfd2d6;
+  width: 50px;
+}
+table tr td:first-child{
+  background-color: #bfd2d6;
+  width: 50px;
+}

@@ -1,0 +1,58 @@
+{
+  "post": [
+    {
+      "id": "vitun@",
+      "name": "vitun",
+      "password": "vitun",
+      "emails": "vitun@gmail.com",
+      "gender": "male",
+      "role": "admin",
+      "isActive": true
+    },
+    {
+      "id": "bajwa@",
+      "name": "vitun",
+      "password": "vitun",
+      "emails": "bajwa@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isActive": false
+    },
+    {
+      "id": "vitun",
+      "name": "vitunbajwa",
+      "password": "vitun",
+      "emails": "vitun@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isActive": false
+    },
+    {
+      "id": "admin",
+      "name": "admin",
+      "password": "admin",
+      "emails": "admin@gmail.com",
+      "gender": "male",
+      "role": "",
+      "isActive": false
+    }
+  ],
+  "role": [
+    {
+      "code": "hr",
+      "name": "HR Department"
+    },
+    {
+      "code": "sales",
+      "name": "sale staff"
+    },
+    {
+      "code": "Telecaller",
+      "name": "Telecaller staff"
+    },
+    {
+      "code": "Tester",
+      "name": "Tester staff"
+    }
+  ]
+}

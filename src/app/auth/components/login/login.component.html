@@ -1,0 +1,22 @@
+<div class="main">
+  <form [formGroup]="form">
+    <app-common-input [control]="loginControlNames.firstname" [label]="loginControlNames.firstname" [type]="'text'" [name]="'name'" [form]="form"
+      [placeholder]="loginControlNames.firstname" [error] ="getErrorValidator(loginControlNames.firstname)" [icon]="'person'"></app-common-input><br>
+
+  <app-common-input [control]="loginControlNames.lastname" [label]="loginControlNames.lastname" [type]="'text'" [name]="'address'" [form]="form"
+    [placeholder]="loginControlNames.lastname" [icon]="'person'"  [error] ="getErrorValidator(loginControlNames.lastname)"></app-common-input><br>
+
+  <app-common-input [control]="loginControlNames.email" [label]="loginControlNames.email" [type]="'text'" [name]="'address'" [form]="form"
+    [placeholder]="loginControlNames.email" [icon]="'email'"  [error] ="getErrorValidator(loginControlNames.email)"></app-common-input><br>
+
+  <app-common-input [control]="loginControlNames.password" [label]="loginControlNames.password" [type]="'password'" [name]="'password'" [form]="form"
+    [placeholder]="loginControlNames.password"  [error] ="getErrorValidator(loginControlNames.password)"></app-common-input><br>
+
+  <app-common-input [control]="loginControlNames.confirmPassword" [label]="loginControlNames.confirmPassword" [type]="'password'" [name]="'confirmPassword'"
+    [form]="form" [placeholder]="loginControlNames.confirmPassword" [error] ="getErrorValidator(loginControlNames.confirmPassword)">
+  </app-common-input>
+  </form>
+  <button mat-raised-button color="accent" [disabled]="this.form.invalid" [(ngModel)]="form" (click)="onSubmit()" type="submit">save</button>
+</div>
+
+{{validationService.getErrorValidatonMessages('','')}}

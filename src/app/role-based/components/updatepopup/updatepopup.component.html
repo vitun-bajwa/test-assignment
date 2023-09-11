@@ -1,0 +1,24 @@
+<mat-card>
+  <mat-card-header>
+    <h2 class="text-center">User Update for Angular</h2>
+  </mat-card-header>
+  <mat-card-content>
+    <form class="example-form" [formGroup]="registerForm" (ngSubmit)="updateUser()">
+      <mat-form-field class="example-full-width">
+          <mat-label>Role</mat-label>
+          <mat-select formControlName="role">
+            <mat-option *ngFor="let item of roleList" [value]="item.code">
+              {{item.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <div>
+          <mat-checkbox formControlName="role" class="example-margin">Check me!</mat-checkbox>
+        </div>
+      <div>
+        <button mat-raised-button color="primary">Update</button>
+        <a mat-dialog-close mat-raised-button color="accent">Close</a>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

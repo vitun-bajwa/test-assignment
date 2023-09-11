@@ -1,0 +1,31 @@
+<div>
+  <table class="table">
+    <thead>
+      <tr class="table-success">
+        <th *ngFor="let data of columns">{{data | titlecase}}</th>
+        <th>icons</th>
+      </tr>
+    </thead>
+    <input type="text" class="form-control search-field" placeholder="Search Here" [formControl]="value"
+    (keyup)="search($event)">
+    <tbody>
+      <tr *ngFor="let item of storage | search: searchText">
+        <td *ngFor="let data of columns">{{item[data]}}
+        </td>
+        <td>
+          <span class="input-group-addon"><i class="fa-regular fa-pen-to-square"
+              (click)="openDialog(item)"></i></span>&nbsp;&nbsp;&nbsp;&nbsp;
+          <!-- <span class="input-group-addon"><i class="fa-sharp fa-solid fa-trash"></i></span> -->
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- [routerLink]="['/query/get/EmpDetail/',item.id]" -->
+<p>
+  example99 Works! Check the console log
+</p>
+<button counting>Increment</button>
+<button >Increment2</button>
+<button >Increment3</button>

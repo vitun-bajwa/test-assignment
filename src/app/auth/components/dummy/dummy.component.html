@@ -1,0 +1,17 @@
+<app-loader></app-loader>
+<table class="table table-dark table-striped">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of products">
+      <td>{{data.id }}</td>
+      <td>{{data.name}}</td>
+      <td>{{data.username}}</td>
+    </tr>
+  </tbody>
+</table>

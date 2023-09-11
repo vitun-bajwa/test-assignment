@@ -1,0 +1,21 @@
+<mat-tab-group>
+
+  <mat-tab label="Crises Center">
+    <app-crisis-center (crisis)="crisis($event)"></app-crisis-center>
+  </mat-tab>
+  <mat-tab label="Heroes">
+    <app-heroes (hero)="show($event)"></app-heroes>
+  </mat-tab>
+  <mat-tab label="Login">
+    <app-login (logins)="login($event)"></app-login>
+  </mat-tab>
+  <mat-tab label="Admin">
+    <app-admin (admins)="admin($event)"></app-admin>
+ </mat-tab>
+  <mat-tab label="Contact">
+    <app-contacts (contacts)="contact($event)"></app-contacts>
+  </mat-tab>
+
+</mat-tab-group>
+
+<!-- <router-outlet></router-outlet> -->
