@@ -35,6 +35,10 @@ const routes: Routes = [
     path:'rxjs',
     loadChildren: () => import('./rxjs/rxjs.module').then(m =>m.RxjsModule)
   },
+  {
+    path:'captcha',
+    loadChildren: () => import('./captcha/captcha.module').then(m =>m.CaptchaModule)
+  },
 ];
 
 @NgModule({

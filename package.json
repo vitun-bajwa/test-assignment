@@ -30,6 +30,8 @@
     "bootstrap": "^5.3.0",
     "eventemitter3": "^2.0.3",
     "jquery": "^3.7.0",
+    "ng-recaptcha": "^2.2.0",
+    "ngx-captcha": "^2.2.1",
     "ngx-infinite-scroll": "^16.0.0",
     "ngx-spinner": "^16.0.2",
     "ngx-toastr": "^14.3.0",

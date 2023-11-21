@@ -1,0 +1,7 @@
+<div [hidden]="captcha">
+    <p>hello human...</p>
+    <re-captcha (resolved)="resolved($event)" siteKey="6LdPVxUpAAAAAMRHqkLNgrnND8_iBttNwB0TGZV_"></re-captcha>
+</div>
+<div [hidden]="!captcha">
+    <p>{{email}}</p>
+</div>
