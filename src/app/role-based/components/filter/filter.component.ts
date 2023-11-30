@@ -16,6 +16,7 @@ export class FilterComponent implements OnInit {
     const cars = ['Jaguar', 'BMW', 'TATA'];
     bikes.push(...cars);
     console.log(bikes);
+    this.getStudentId()
   }
 
   filter(): void {
@@ -181,6 +182,10 @@ export class FilterComponent implements OnInit {
     let totalSum: number = 0
     const x = data.forEach((item: any) => (item.price.forEach((prices: any) => totalSum = totalSum + prices.ex)))
     console.log(totalSum);
+
+    let total: number = 0;
+    const y = data.forEach((item: any) => (item.price.forEach((prices: any) => total += prices.ex)));
+    console.log(total);
 
     // const totalSum = data.reduce((sum, item) => {
     //   // debugger
@@ -509,7 +514,7 @@ export class FilterComponent implements OnInit {
   }
 
 
-  filterEight(){
+  filterEight() {
     let array = [
       {
         "name": "Product A",
@@ -564,9 +569,172 @@ export class FilterComponent implements OnInit {
         totalSum = totalSum + review.rating
       });
     })
+
+    const y = array.forEach((item: any) => {
+      item.reviews.forEach((review: any) => {
+        totalSum = totalSum + review.rating + item.price
+      })
+    })
     // const z = array.forEach((reviews: any) => totalSum = totalSum + reviews.rating)
     console.log(totalSum);
   }
+
+
+  getStudentId() {
+    var stud = "T.VictoriaTRAD Marquez-670026";
+    let id = stud.split("-")[1];
+    console.log(id);
   }
 
+  filterNine() {
+    let array = [{
+      "currentUser": {
+        "image": {
+          "png": "./images/avatars/image-juliusomo.png",
+          "webp": "./images/avatars/image-juliusomo.webp"
+        },
+        "username": "juliusomo"
+      },
+      "comments": [
+        {
+          "id": 1,
+          "content": "Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.",
+          "createdAt": "1 month ago",
+          "score": 12,
+          "user": {
+            "image": {
+              "png": "./images/avatars/image-amyrobson.png",
+              "webp": "./images/avatars/image-amyrobson.webp"
+            },
+            "username": "amyrobson"
+          },
+          "replies": []
+        },
+        {
+          "id": 2,
+          "content": "Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!",
+          "createdAt": "2 weeks ago",
+          "score": 5,
+          "user": {
+            "image": {
+              "png": "./images/avatars/image-maxblagun.png",
+              "webp": "./images/avatars/image-maxblagun.webp"
+            },
+            "username": "maxblagun"
+          },
+          "replies": [
+            {
+              "id": 3,
+              "content": "If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.",
+              "createdAt": "1 week ago",
+              "score": 4,
+              "replyingTo": "maxblagun",
+              "user": {
+                "image": {
+                  "png": "./images/avatars/image-ramsesmiron.png",
+                  "webp": "./images/avatars/image-ramsesmiron.webp"
+                },
+                "username": "ramsesmiron"
+              }
+            },
+          ]
+        }
+      ]
+    }
+    ]
+  }
 
+  filterTen() {
+    const familyTree = [
+      {
+        id: "23b9dbff",
+        name: "Jessie",
+        age: 50,
+        children: [
+          {
+            id: "5c0f3094",
+            name: "Peter",
+            age: 20
+          },
+          {
+            id: "c1484221",
+            name: "Paul",
+            age: 32,
+            children: [
+              {
+                id: "2e6d866e",
+                name: "Carol",
+                age: 12
+              },
+              {
+                id: "e48a27ad",
+                name: "Hester",
+                age: 15
+              }
+            ]
+          },
+          {
+            id: "8a265c23",
+            name: "Hilda",
+            age: 25
+          }
+        ]
+      },
+      {
+        id: "53164b2b",
+        name: "Mathew",
+        age: 70,
+        children: [
+          {
+            id: "b14a960c",
+            name: "Spencer",
+            age: 45,
+            children: [
+              {
+                id: "ff3c260c",
+                name: "Joseph",
+                age: 22
+              },
+              {
+                id: "7c60920a",
+                name: "Robert",
+                age: 27,
+                children: [
+                  {
+                    id: "0e11874f",
+                    name: "Ian",
+                    age: 2
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: "5a4bdc98",
+        name: "Claire",
+        age: 63,
+        children: [
+          {
+            id: "014b62a3",
+            name: "Adrian",
+            age: 41
+          },
+          {
+            id: "a1899541",
+            name: "Julie",
+            age: 32,
+            children: [
+              {
+                id: "013362a3",
+                name: "Patricia",
+                age: 4
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
