@@ -570,6 +570,13 @@ export class FilterComponent implements OnInit {
       });
     })
 
+    const z = array.forEach((item: any) => {
+      totalSum = totalSum * item.price
+      item.reviews.forEach((review: any) => {
+         totalSum = totalSum * review.rating
+      });
+    })
+
     const y = array.forEach((item: any) => {
       item.reviews.forEach((review: any) => {
         totalSum = totalSum + review.rating + item.price

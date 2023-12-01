@@ -35,6 +35,7 @@ import { LoginComponent } from './components/login/login.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
 import { TabComponent } from './components/tab/tab.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { MatTabGroupComponent } from './mat-tab-group/mat-tab-group.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import {MatTabsModule} from '@angular/material/tabs';
     LoginComponent,
     ContactsComponent,
     TabComponent,
+    MatTabGroupComponent,
 
   ],
   imports: [

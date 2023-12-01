@@ -21,6 +21,7 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { LoginComponent } from './components/login/login.component';
 import { ContactsComponent } from './components/contacts/contacts.component';
+import { MatTabGroupComponent } from './mat-tab-group/mat-tab-group.component';
 
 const routes: Routes = [
   {
@@ -97,7 +98,9 @@ const routes: Routes = [
     ]
   },
 
-
+{
+  path: 'mat',component:MatTabGroupComponent
+}
 
 
 ];
