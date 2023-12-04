@@ -584,6 +584,12 @@ export class FilterComponent implements OnInit {
     })
     // const z = array.forEach((reviews: any) => totalSum = totalSum + reviews.rating)
     console.log(totalSum);
+
+    const s = array.forEach((item:any) => {
+      item.reviews.forEach((review:any) => {
+        totalSum = totalSum + review.rating + item.price
+      })
+    })
   }
 
 
